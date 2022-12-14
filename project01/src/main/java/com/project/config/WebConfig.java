@@ -16,8 +16,9 @@ public class WebConfig implements WebMvcConfigurer{
 	 @Override
 	    public void addInterceptors(InterceptorRegistry registry) {
 	        registry.addInterceptor(interceptor)
-	                .addPathPatterns("/**")
-	                .excludePathPatterns("/css/**", "/images/**", "/js/**"); //static 폴더 내 정적 리소스 파일 제외 
+	                .addPathPatterns("/**");
+	                //.excludePathPatterns("/css/**", "/images/**", "/js/**"); //static 폴더 내 정적 리소스 파일 제외
+	        		// 정적 리소스 파일을 왜 제외해야하는지? 
 	    }
 
 }

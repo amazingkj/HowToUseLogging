@@ -1,4 +1,4 @@
-package com.project;
+package com.project.controller;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.project.dto.PostRequestDto;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 @RequestMapping("/access")
 public class AccessController {
@@ -29,9 +32,17 @@ public class AccessController {
 		
 		//http://localhost:8080/access/post
 		@PostMapping(path="/post") //post
-		public void post(@RequestBody PostRequestDto requestDto) {
-				System.out.println(requestDto);
+		public PostRequestDto post(@RequestBody PostRequestDto requestDto) {
+				log.info("requestDto : ",requestDto);
+				return requestDto;
 				
+		}
+		
+		//http://localhost:8080/access/post
+		@PostMapping(path="/post2") //post
+		public PostRequestDto post2(@RequestBody PostRequestDto requestDto) {
+				log.info("requestDto : {},{} ",requestDto,requestDto);
+				return requestDto;		
 		}
 		
 		@PutMapping(path="/put") //put

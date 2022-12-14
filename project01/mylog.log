@@ -6897,4 +6897,1608 @@ ERROR 2022-12-12 17:45:30 [http-nio-8080-exec-1] [StartController.java - main] [
                     "logger":"com.project.Project01Application",
                     "exception": "",
                     "payload": "#asJson{Started Project01Application in 0.12 seconds (JVM running for 1548.123)}"
+                    }{
+                    "@timestamp":"2022-12-14T15:56:58.786+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T15:56:58.786+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T15:56:58.786+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T15:56:58.908+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.135 seconds (JVM running for 2374.548)}"
+                    }{
+                    "@timestamp":"2022-12-14T15:57:24.944+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{===============================================}"
+                    }{
+                    "@timestamp":"2022-12-14T15:57:24.944+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== BEGIN ====================}"
+                    }{
+                    "@timestamp":"2022-12-14T15:57:24.944+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{Request URI ===> /access/post}"
+                    }{
+                    "@timestamp":"2022-12-14T15:57:24.984+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{===============================================}"
+                    }{
+                    "@timestamp":"2022-12-14T15:57:24.984+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== BEGIN ====================}"
+                    }{
+                    "@timestamp":"2022-12-14T15:57:24.984+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{Request URI ===> /error}"
+                    }{
+                    "@timestamp":"2022-12-14T15:57:24.998+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== END ======================}"
+                    }{
+                    "@timestamp":"2022-12-14T15:57:24.998+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{===============================================}"
+                    }{
+                    "@timestamp":"2022-12-14T16:01:39.230+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:01:39.230+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:01:39.230+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:01:39.335+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.115 seconds (JVM running for 2654.975)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:09:00.841+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:09:00.841+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:09:00.841+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:09:00.958+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.128 seconds (JVM running for 3096.598)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:09:26.969+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:09:26.969+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:09:26.969+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:09:27.075+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.117 seconds (JVM running for 3122.714)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:09:50.033+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:09:50.033+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:09:50.033+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:09:50.127+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.103 seconds (JVM running for 3145.767)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:12:59.511+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:12:59.511+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:12:59.511+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:12:59.604+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.103 seconds (JVM running for 3335.244)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:13:06.167+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:13:06.167+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:13:06.167+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:13:06.276+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.121 seconds (JVM running for 3341.916)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:13:09.813+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:13:09.813+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:13:09.813+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:13:09.908+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.105 seconds (JVM running for 3345.548)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:14:09.685+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:14:09.685+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:14:09.685+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:14:09.780+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.105 seconds (JVM running for 3405.42)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:32:20.005+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:32:20.005+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:32:20.005+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:32:20.108+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.114 seconds (JVM running for 4495.748)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:32:57.882+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:32:57.882+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:32:57.882+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:32:57.971+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.099 seconds (JVM running for 4533.611)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:33:59.370+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:33:59.370+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:33:59.370+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:33:59.462+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.102 seconds (JVM running for 4595.103)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:43:10.042+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:43:10.042+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:43:10.042+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:43:10.144+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.113 seconds (JVM running for 5145.784)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:43:37.176+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:43:37.176+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:43:37.176+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:43:37.264+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.097 seconds (JVM running for 5172.904)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:48:17.748+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:48:17.748+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:48:17.748+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:48:17.858+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.122 seconds (JVM running for 5453.498)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:48:31.507+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:48:31.507+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:48:31.507+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:48:31.596+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.099 seconds (JVM running for 5467.236)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:49:17.399+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:49:17.399+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:49:17.399+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:49:17.494+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.105 seconds (JVM running for 5513.135)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:49:30.694+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-2",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== BEGIN ====================}"
+                    }{
+                    "@timestamp":"2022-12-14T16:49:30.694+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-2",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{Request URI ===> /access/post}"
+                    }{
+                    "@timestamp":"2022-12-14T16:49:30.696+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"http-nio-8080-exec-2",
+                    "logger":"com.project.filter.RequestFilter",
+                    "exception": "",
+                    "payload": "#asJson{
+[REQUEST] POST - /access/post 400 - 0.001
+Headers : {sec-fetch-mode=cors, content-length=31, sec-fetch-site=none, accept-language=ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7, accept=*/*, sec-ch-ua="Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108", sec-ch-ua-mobile=?0, sec-ch-ua-platform="Windows", host=localhost:8080, connection=keep-alive, content-type=application/json, accept-encoding=gzip, deflate, br, user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36, sec-fetch-dest=empty}
+Request : { "name":"hello",
+ "age" :"dd"}
+Response :  - 
+}"
+                    }{
+                    "@timestamp":"2022-12-14T16:49:30.698+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-2",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== BEGIN ====================}"
+                    }{
+                    "@timestamp":"2022-12-14T16:49:30.698+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-2",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{Request URI ===> /error}"
+                    }{
+                    "@timestamp":"2022-12-14T16:49:30.700+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-2",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== END ======================}"
+                    }{
+                    "@timestamp":"2022-12-14T16:51:05.710+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-4",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== BEGIN ====================}"
+                    }{
+                    "@timestamp":"2022-12-14T16:51:05.710+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-4",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{Request URI ===> /access/post}"
+                    }{
+                    "@timestamp":"2022-12-14T16:51:05.718+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-4",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== END ======================}"
+                    }{
+                    "@timestamp":"2022-12-14T16:51:05.718+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"http-nio-8080-exec-4",
+                    "logger":"com.project.filter.RequestFilter",
+                    "exception": "",
+                    "payload": "#asJson{
+[REQUEST] POST - /access/post 200 - 0.009
+Headers : {sec-fetch-mode=cors, content-length=28, sec-fetch-site=none, accept-language=ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7, accept=*/*, sec-ch-ua="Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108", sec-ch-ua-mobile=?0, sec-ch-ua-platform="Windows", host=localhost:8080, connection=keep-alive, content-type=application/json, accept-encoding=gzip, deflate, br, user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36, sec-fetch-dest=empty}
+Request : { "name":"hello",
+ "age" :3}
+Response :  - 
+}"
+                    }{
+                    "@timestamp":"2022-12-14T16:52:16.645+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 19044 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T16:52:16.645+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T16:52:16.645+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T16:52:16.742+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.107 seconds (JVM running for 5692.383)}"
+                    }{
+                    "@timestamp":"2022-12-14T17:19:53.954+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 13932 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T17:19:53.954+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T17:19:53.955+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T17:19:54.772+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 1.131 seconds (JVM running for 1.54)}"
+                    }{
+                    "@timestamp":"2022-12-14T17:20:03.211+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== BEGIN ====================}"
+                    }{
+                    "@timestamp":"2022-12-14T17:20:03.211+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{Request URI ===> /access/post}"
+                    }{
+                    "@timestamp":"2022-12-14T17:20:03.250+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== END ======================}"
+                    }{
+                    "@timestamp":"2022-12-14T17:20:03.251+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.filter.RequestFilter",
+                    "exception": "",
+                    "payload": "#asJson{
+[REQUEST] POST - /access/post 200 - 0.048
+Headers : {sec-fetch-mode=cors, content-length=28, sec-fetch-site=none, accept-language=ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7, accept=*/*, sec-ch-ua="Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108", sec-ch-ua-mobile=?0, sec-ch-ua-platform="Windows", host=localhost:8080, connection=keep-alive, content-type=application/json, accept-encoding=gzip, deflate, br, user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36, sec-fetch-dest=empty}
+Request : { "name":"hello",
+ "age" :3}
+Response :  - 
+}"
+                    }{
+                    "@timestamp":"2022-12-14T17:25:43.637+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 13932 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T17:25:43.637+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T17:25:43.637+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T17:25:43.798+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.176 seconds (JVM running for 350.565)}"
+                    }{
+                    "@timestamp":"2022-12-14T17:26:46.615+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 13932 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T17:26:46.615+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T17:26:46.615+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T17:26:46.759+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.16 seconds (JVM running for 413.527)}"
+                    }{
+                    "@timestamp":"2022-12-14T17:30:36.667+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== BEGIN ====================}"
+                    }{
+                    "@timestamp":"2022-12-14T17:30:36.667+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{Request URI ===> /access/post}"
+                    }{
+                    "@timestamp":"2022-12-14T17:30:36.669+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.controller.AccessController",
+                    "exception": "",
+                    "payload": "#asJson{requestDto : }"
+                    }{
+                    "@timestamp":"2022-12-14T17:30:36.679+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== END ======================}"
+                    }{
+                    "@timestamp":"2022-12-14T17:30:36.680+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.filter.RequestFilter",
+                    "exception": "",
+                    "payload": "#asJson{
+[REQUEST] POST - /access/post 200 - 0.012
+Headers : {sec-fetch-mode=cors, content-length=28, sec-fetch-site=none, accept-language=ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7, accept=*/*, sec-ch-ua="Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108", sec-ch-ua-mobile=?0, sec-ch-ua-platform="Windows", host=localhost:8080, connection=keep-alive, content-type=application/json, accept-encoding=gzip, deflate, br, user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36, sec-fetch-dest=empty}
+Request : { "name":"hello",
+ "age" :3}
+Response : {"name":"hello","age":3}
+}"
+                    }{
+                    "@timestamp":"2022-12-14T17:41:02.179+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 13932 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T17:41:02.179+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T17:41:02.179+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T17:41:02.310+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.148 seconds (JVM running for 1269.078)}"
+                    }{
+                    "@timestamp":"2022-12-14T17:41:29.689+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== BEGIN ====================}"
+                    }{
+                    "@timestamp":"2022-12-14T17:41:29.689+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{Request URI ===> /access/post}"
+                    }{
+                    "@timestamp":"2022-12-14T17:41:29.691+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.controller.AccessController",
+                    "exception": "",
+                    "payload": "#asJson{requestDto : }"
+                    }{
+                    "@timestamp":"2022-12-14T17:41:29.692+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== END ======================}"
+                    }{
+                    "@timestamp":"2022-12-14T17:41:29.693+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.filter.RequestFilter",
+                    "exception": "",
+                    "payload": "#asJson{
+[REQUEST] POST - /access/post 200 - 0.004
+Headers : {sec-fetch-mode=cors, content-length=28, sec-fetch-site=none, accept-language=ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7, accept=*/*, sec-ch-ua="Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108", sec-ch-ua-mobile=?0, sec-ch-ua-platform="Windows", host=localhost:8080, connection=keep-alive, content-type=application/json, accept-encoding=gzip, deflate, br, user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36, sec-fetch-dest=empty}
+Request : { "name":"hello",
+ "age" :3}
+Response : {"name":"hello","age":3}
+}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:00.245+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 13932 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:00.245+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:00.245+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:00.348+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.114 seconds (JVM running for 1387.117)}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:01.188+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== BEGIN ====================}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:01.188+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{Request URI ===> /access/post}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:01.190+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.controller.AccessController",
+                    "exception": "",
+                    "payload": "#asJson{requestDto : }"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:01.190+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== END ======================}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:01.191+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.filter.RequestFilter",
+                    "exception": "",
+                    "payload": "#asJson{
+[REQUEST] POST - /access/post 200 - 0.003
+Headers : {sec-fetch-mode=cors, content-length=28, sec-fetch-site=none, accept-language=ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7, accept=*/*, sec-ch-ua="Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108", sec-ch-ua-mobile=?0, sec-ch-ua-platform="Windows", host=localhost:8080, connection=keep-alive, content-type=application/json, accept-encoding=gzip, deflate, br, user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36, sec-fetch-dest=empty}
+Request : { "name":"hello",
+ "age" :3}
+Response : {"name":"hello","age":3}
+}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:07.264+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 1408 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:07.265+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:07.265+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:08.035+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 1.063 seconds (JVM running for 1.45)}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:10.002+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== BEGIN ====================}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:10.002+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{Request URI ===> /access/post}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:10.037+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.controller.AccessController",
+                    "exception": "",
+                    "payload": "#asJson{requestDto : }"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:10.046+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.config.Interceptor",
+                    "exception": "",
+                    "payload": "#asJson{==================== END ======================}"
+                    }{
+                    "@timestamp":"2022-12-14T17:43:10.048+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"http-nio-8080-exec-1",
+                    "logger":"com.project.filter.RequestFilter",
+                    "exception": "",
+                    "payload": "#asJson{
+[REQUEST] POST - /access/post 200 - 0.049
+Headers : {sec-fetch-mode=cors, content-length=28, sec-fetch-site=none, accept-language=ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7, accept=*/*, sec-ch-ua="Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108", sec-ch-ua-mobile=?0, sec-ch-ua-platform="Windows", host=localhost:8080, connection=keep-alive, content-type=application/json, accept-encoding=gzip, deflate, br, user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36, sec-fetch-dest=empty}
+Request : { "name":"hello",
+ "age" :3}
+Response : {"name":"hello","age":3}
+}"
+                    }{
+                    "@timestamp":"2022-12-14T17:47:29.270+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Starting Project01Application using Java 17.0.5 on DESKTOP-E77C55P with PID 1408 (C:\amazing\LogProject\project01\target\classes started by DIR-N-0153 in C:\amazing\LogProject\project01)}"
+                    }{
+                    "@timestamp":"2022-12-14T17:47:29.271+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"DEBUG",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Running with Spring Boot v2.7.6, Spring v5.3.24}"
+                    }{
+                    "@timestamp":"2022-12-14T17:47:29.271+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{No active profile set, falling back to 1 default profile: "default"}"
+                    }{
+                    "@timestamp":"2022-12-14T17:47:29.417+0900",
+                    "service":"SPRING_APPLICATION_NAME_IS_UNDEFINED",
+                    "phase":"SPRING_PROFILES_ACTIVE_IS_UNDEFINED",
+                    "traceId": "",
+                    "spanId": "",
+                    "level":"INFO",
+                    "thread":"restartedMain",
+                    "logger":"com.project.Project01Application",
+                    "exception": "",
+                    "payload": "#asJson{Started Project01Application in 0.161 seconds (JVM running for 262.832)}"
                     }
