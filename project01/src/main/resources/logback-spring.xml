@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- 콘솔로 로그를 남김 -->
+	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<!-- 로그 메시지 패턴 -->
+			<Pattern>
+                                 %magenta(%-5level) %d{HH:mm:ss.SSS} %cyan([%thread]) %logger{5} - %msg%n
+                           </Pattern>
+		</encoder>
+	</appender>
+	-->
+	<!-- 파일로 로그를 남김 -->
+	<appender name="fileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>./mylog.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				<!--%-5level %d{yyyy-MM-dd HH:mm:ss} [%thread] [%F - %M] [%logger{0}:%line] - %msg%n-->
+				<pattern>
+                    {
+                    "@timestamp":"%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ}",
+                    "service":"${SPRING_APPLICATION_NAME}",
+                    "phase":"${SPRING_PROFILES_ACTIVE}",
+                    "traceId": "%X{X-B3-TraceId:-}",
+                    "spanId": "%X{X-B3-SpanId:-}",
+                    "level":"%level",
+                    "thread":"%thread",
+                    "logger":"%logger",
+                    "exception": "%ex{2}",
+                    "payload": "#asJson{%msg}"
+                    }
+        		</pattern>
+			</Pattern>
+		</encoder>
+		<!-- 로그를 남기는 파일의 용량이 50KB가 넘으면 이를 압축 파일로 만들고 새로 로그 파일로 만들라는 정책 -->
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy"></triggeringPolicy>
+		<!-- 파일을 덮어쓰는 정책 -->
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<FileNamePattern>./mylog.%i.log.zip</FileNamePattern>
+			<!--
+                               MinIndex가 1이고, MaxIndex가 10이므로, 위의 파일 이름 패턴에 따라 아래의 로그 파일이 생길 것이다.
+                               logexample2.1.log.zip   logexample2.2.log.zip  .... logexample2.10.log.zip
+                               이 상태에서 또 10KB가 넘으면 logexample2.1.log.zip이 된다.
+                           -->
+			<MinIndex>1</MinIndex>
+			<MaxIndex>10</MaxIndex>
+		</rollingPolicy>
+	</appender>
+	
+	
+	<!-- Json으로 변환해서 콘솔남김 -->
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+			<layout class="ch.qos.logback.contrib.json.classic.JsonLayout">
+				<timestampFormat>yyyy-MM-dd'T'HH:mm:ss.SSSX</timestampFormat>
+				<timestampFormatTimezoneId>Etc/UTC</timestampFormatTimezoneId>
+				<jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
+					<prettyPrint>true</prettyPrint>
+				</jsonFormatter>
+			</layout>
+		</encoder>
+	</appender>
+	<!-- 원격의 서버로 log파일을 보낼 수 있음
+		  <springProperty name="host" source="logserver.host" defaultValue="http://dev-logserver.com"/>
+		  <appender name="REMOTE_LOG_SERVER" class="xxx.yyy.RemoteLogAppender">
+  		  <remoteHost>${host}</remoteHost>
+ 		  </appender>
+		-->
+	<!--
+          com.project 아래 패키지 로그들만  consoleAppender, fileAppender 방법으로 로그를 남김
+          <logger name="org.springframework" level="info" />
+        -->
+	<logger name="org.springframework.web.filter.CommonsRequestLoggingFilter" level="DEBUG" />
+	
+	
+	<logger name="com.project" level="trace" additivity="false">
+		<appender-ref ref="fileAppender" />
+	</logger>
+
+	<!-- root는 글로벌 로거를 의미하며, 위의 logger에 해당하지 않으면 root 로거가 실행된다. -->
+	<root level="DEBUG">
+		<appender-ref ref="stdout" />
+	</root>
+	<!--에러로그 따로 관리할수도있지만 쿼리문에서 관리하는 것이 편할 것 같음        
+         <filter class="ch.qos.logback.classic.filter.LevelFilter">
+ 		 <level>error</level>
+  		 <onMismatch>DENY</onMismatch> 
+	     </filter> -->
+</configuration>

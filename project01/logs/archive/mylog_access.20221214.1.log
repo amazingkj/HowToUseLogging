@@ -1,0 +1,48 @@
+{
+						"timestamp":"2022-12-14 11:33:16",
+						"host":"0:0:0:0:0:0:0:1",
+						"accessIp":"0:0:0:0:0:0:0:1",
+						"clientId":"-",
+						"responseId":"-",
+						"method":"POST",
+						"status":"400",
+						"path":"/access/post",
+						"queryString":"",
+						"protocol":"HTTP/1.1",
+						"size":"-",
+						"refererHeader":"-",
+						"userAgentHeader":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+						"responseTime":"63"
+					}
+{
+						"timestamp":"2022-12-14 12:03:07",
+						"host":"0:0:0:0:0:0:0:1",
+						"accessIp":"0:0:0:0:0:0:0:1",
+						"clientId":"-",
+						"responseId":"-",
+						"method":"POST",
+						"status":"400",
+						"path":"/access/post",
+						"queryString":"",
+						"protocol":"HTTP/1.1",
+						"size":"-",
+						"refererHeader":"-",
+						"userAgentHeader":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+						"responseTime":"56"
+					}
+{
+						"timestamp":"2022-12-14 12:03:55",
+						"host":"0:0:0:0:0:0:0:1",
+						"accessIp":"0:0:0:0:0:0:0:1",
+						"clientId":"-",
+						"responseId":"-",
+						"method":"POST",
+						"status":"400",
+						"path":"/access/post",
+						"queryString":"",
+						"protocol":"HTTP/1.1",
+						"size":"-",
+						"refererHeader":"-",
+						"userAgentHeader":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+						"responseTime":"3"
+					}
