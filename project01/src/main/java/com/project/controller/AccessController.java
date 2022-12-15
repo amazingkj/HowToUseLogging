@@ -47,7 +47,7 @@ public class AccessController {
 		
 		@PutMapping(path="/put") //put
 		public void put(@RequestBody PostRequestDto requestDto) {
-				System.out.println(requestDto);
+			log.info("requestDto : ",requestDto);
 				
 		}
 		
@@ -55,6 +55,7 @@ public class AccessController {
 		public void delete(@PathVariable String userId, @RequestParam String account) {
 			System.out.println(userId);
 			System.out.println(account);
+			log.info("delete acount : {},{} ",userId, account);
 				//db가 없는 상태라 리소스 삭제 200으로 ok 발생
 		}
 		
