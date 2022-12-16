@@ -1,9 +1,7 @@
 package com.project.controller;
 
-import org.slf4j.Logger;
-
-
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,12 +20,12 @@ public class StartController {
 		return "스프링 부트 시작";
 		
 	}
-	private final Logger logger = LoggerFactory.getLogger(StartController.class);
-	@GetMapping("")
-	public void log() {
-		logger.info("로깅 발생!");
-		
-	}
+//	private final Logger logger = LoggerFactory.getLogger(StartController.class);
+//	@GetMapping("")
+//	public void log() {
+//		logger.info("로깅 발생!");
+//		
+//	}
 	
 	
 	@RequestMapping("/log")

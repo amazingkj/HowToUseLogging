@@ -43,17 +43,21 @@ public class RequestFilter2 implements Filter {
 			JsonNode responseJson = objectMapper.readTree(httpServletResponse.getContentAsByteArray());
 			JsonNode requestJson = objectMapper.readTree(httpServletRequest.getContentAsByteArray());
 			
-			 log.info(objectMapper.treeToValue(responseJson, PostRequestDto.class).toString());
-			 log.info(objectMapper.treeToValue(requestJson, PostRequestDto.class).toString());
+			log.info(objectMapper.treeToValue(responseJson, PostRequestDto.class).toString());
+			log.info(objectMapper.treeToValue(requestJson, PostRequestDto.class).toString());
+			
+			 
 			System.out.println(requestJson);
 			System.out.println(responseJson);
 			
+			// header >> ***추가하기
 			
-	        //후처리 - reqContent
+			
+	        //후처리 - reqContent 
 	        String reqContent = new String(httpServletRequest.getContentAsByteArray());
 	        log.info("request url : {}, requestBody : {}", url, reqContent);
 	       
-	        // -resContent
+	        // -resContent >> url json 으로 넣어주기 
 	        String resContent = new String(httpServletResponse.getContentAsByteArray());
 	        int httpStatus = httpServletResponse.getStatus();
 	        
