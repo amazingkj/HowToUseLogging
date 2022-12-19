@@ -56,7 +56,7 @@ public class StartController {
     	log.info("mdc test");
 	    	
 
-    	log.trace("mdc ------ Trace");
+    	log.trace("mdc ------ TRACE");
 		log.debug("mdc ------ DEBUG");
 		log.info("mdc ------ INFO");
 		log.warn("mdc ------ WARN");

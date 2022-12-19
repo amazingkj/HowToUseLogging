@@ -33,7 +33,7 @@ public class AccessController {
 		//http://localhost:8080/access/post
 		@PostMapping(path="/post") //post
 		public PostRequestDto post(@RequestBody PostRequestDto requestDto) {
-				log.info("requestDto : ",requestDto);
+				log.info("requestDto : {}",requestDto);
 				return requestDto;
 				
 		}
@@ -57,6 +57,18 @@ public class AccessController {
 			System.out.println(account);
 			log.info("delete acount : {},{} ",userId, account);
 				//db가 없는 상태라 리소스 삭제 200으로 ok 발생
+		}
+		
+		
+		@RequestMapping("/logtest")
+		public String logTest() {
+			String name = "Spring";
+			System.out.println("name = " + name);
+			log.info(" info log={}", name);
+			
+			
+			return "ok";
+			
 		}
 		
 
