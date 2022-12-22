@@ -98,34 +98,93 @@
 		</encoder>
 	</appender>
 	
+	<!-- Json으로 변환해서 콘솔남김3  -->
+	
+	<appender name="stdout3" class="ch.qos.logback.core.ConsoleAppender">
+		  <encoder class="net.logstash.logback.encoder.LogstashEncoder">-->
+		  <jsonGeneratorDecorator class="com.project.decorator.PrettyPrintingDecorator"/>
+			<includeCallerData>true</includeCallerData>
+   			<fieldNames class="net.logstash.logback.fieldnames.ShortenedFieldNames"/>-->
+         <!--  <jsonFactoryDecorator class="com.project.decorator.StdDateFormat"/>-->
+			</encoder>
+	</appender>
+		
+	<!-- Json으로 변환해서 콘솔남김4  -->
+		<appender name="stdout4" class="ch.qos.logback.core.ConsoleAppender">
+		     <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+		    
+			     <providers>
+                <mdc />
+                <pattern>
+					<!--<omitEmptyFields>false</omitEmptyFields>
+                		아래와 같은 키밸류 타입이 들어가면서 나중에 키바나에서 찾기 수월함-->
+                <pattern>{"serviceID":"logSys"}</pattern>
+					 
+                </pattern>
+                <timestamp />
+                <!--<version />-->
+                <context />
+                <threadName />
+                <logLevel />
+                <message />
+                <loggerName />
+                <logstashMarkers />
+                <stackTrace />
+                <callerData />
+                
+                
+            </providers>			
+			</encoder>
+	</appender>
 	
 	
-	<!-- 원격의 서버로 log파일을 보낼 수 있음
-		  <springProperty name="host" source="logserver.host" defaultValue="http://dev-logserver.com"/>
-		  <appender name="REMOTE_LOG_SERVER" class="xxx.yyy.RemoteLogAppender">
-  		  <remoteHost>${host}</remoteHost>
- 		  </appender>
-		-->
-	<!--
-          com.project 아래 패키지 로그들만  consoleAppender, fileAppender 방법으로 로그를 남김
-          <logger name="org.springframework" level="info" />
-        -->
-        <!--
-    <logger name="org.springframework.web.filter.CommonsRequestLoggingFilter" level="debug" >
-		<appender-ref ref="stdout" />
-	</logger> 
-        
-
-	<logger name="com.project" level="trace" additivity="false">
-		<appender-ref ref="fileAppender" />
-	</logger>-->
-	<!-- 위의 logger에 해당하지 않으면 root 로거가 실행 -->
+	<!-- Json으로 변환해서 콘솔남김5  -->
+		<appender name="stdout5" class="ch.qos.logback.core.ConsoleAppender">
+		     <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+		         <providers>
+                <timestamp>
+                    <timeZone>UTC</timeZone>
+                </timestamp>
+                <version/>
+                <logLevel/>
+                <message/>
+                <loggerName/>
+                <threadName/>
+                <context/>
+                <pattern>
+                    <pattern>
+                        {
+                            "trace": {
+                                "trace_id": "%mdc{X-B3-TraceId}",
+                                "span_id": "%mdc{X-B3-SpanId}",
+                                "parent_span_id": "%mdc{X-B3-ParentSpanId}",
+                                "exportable": "%mdc{X-Span-Export}"
+                            }
+                        }
+                    </pattern>
+                </pattern>
+                <mdc>
+                    <excludeMdcKeyName>traceId</excludeMdcKeyName>
+                    <excludeMdcKeyName>spanId</excludeMdcKeyName>
+                    <excludeMdcKeyName>parentId</excludeMdcKeyName>
+                    <excludeMdcKeyName>spanExportable</excludeMdcKeyName>
+                    <excludeMdcKeyName>X-B3-TraceId</excludeMdcKeyName>
+                    <excludeMdcKeyName>X-B3-SpanId</excludeMdcKeyName>
+                    <excludeMdcKeyName>X-B3-ParentSpanId</excludeMdcKeyName>
+                    <excludeMdcKeyName>X-Span-Export</excludeMdcKeyName>
+                </mdc>
+                <stackTrace/>
+            </providers>
+			</encoder>
+	</appender>
+	
+	
 	<logger name="org.springframework.web.filter.CommonsRequestLoggingFilter" level="debug" >
-		<appender-ref ref="stdout" />
+		<appender-ref ref="fileAppender2" />
+		<appender-ref ref="stdout3" />
 	</logger> 
 	<root level="info" additivity="false">
-		<appender-ref ref="fileAppender2" />
-		<appender-ref ref="stdout2" />		
+		<appender-ref ref="stdout3" />		
 	</root>
 
 </configuration>

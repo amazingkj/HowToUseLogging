@@ -19,7 +19,8 @@ public class PostRequestDto {
 		}
 		@Override
 		public String toString() {
-			return "PostRequestDto [name=" + name + ", age=" + age + "]";
+			return "{name=" + name + ", age=" + age + "}";
+
 		}
 		
 		
