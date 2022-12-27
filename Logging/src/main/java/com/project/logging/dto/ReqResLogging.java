@@ -1,14 +1,8 @@
 package com.project.logging.dto;
 
 public class ReqResLogging {
-
-
-
     private String name;
-
-
     private int age;
-
     public String getName() {
         return name;
     }
@@ -21,4 +15,8 @@ public class ReqResLogging {
     public void setAge(int age) {
         this.age = age;
     }
+
+
 }
+
+
