@@ -17,7 +17,6 @@ public class SampleController {
    // @GetMapping("/sample")
    // pubilc String Sample(@RequestBody ReqResLogging ReqResLogging) {
    // }
-     @Autowired AOPService aopService;
 
     @PostMapping(path="/post") //post
     public ReqResLogging post(@RequestBody @Validated ReqResLogging reqResLogging) {

@@ -66,6 +66,7 @@
 
 		<logger name="dev" additivity="false" level="DEBUG">
 		<appender-ref ref="ELK"/>
+			<appender-ref ref="FILE"/>
 			<appender-ref ref="CONSOLE"/>
 		</logger>
 

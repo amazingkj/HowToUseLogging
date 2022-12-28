@@ -16,7 +16,7 @@ public class ReqResLoggingMsg {
     @JsonProperty(value = "method")
     private String method;
     @JsonProperty(value = "params")
-    private Map<String, String> params;
+    private Map<String,Object> params;
     @JsonProperty(value = "log_time")
     private String logTime;
 
@@ -25,9 +25,9 @@ public class ReqResLoggingMsg {
     @JsonProperty(value = "device_type")
     private String deviceType;
     @JsonProperty(value = "request_body")
-    private String requestBody;
+    private Object requestBody;
     @JsonProperty(value = "response_body")
-    private String responseBody;
+    private Object responseBody;
     @JsonProperty(value = "elapsed_time")
     private String elapsedTime;
 
@@ -88,11 +88,11 @@ public class ReqResLoggingMsg {
         this.method = method;
     }
 
-    public Map<String, String> getParams() {
+    public Map<String,Object> getParams() {
         return params;
     }
 
-    public void setParams(Map<String, String> params) {
+    public void setParams(Map<String,Object> params) {
         this.params = params;
     }
 
@@ -104,15 +104,15 @@ public class ReqResLoggingMsg {
         this.deviceType = deviceType;
     }
 
-    public String getRequestBody() {
+    public Object getRequestBody() {
         return requestBody;
     }
 
-    public void setRequestBody(String requestBody) {
+    public void setRequestBody(Object requestBody) {
         this.requestBody = requestBody;
     }
 
-    public String getResponseBody() {
+    public Object getResponseBody() {
         return responseBody;
     }
 

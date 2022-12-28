@@ -1,5 +1,7 @@
 package com.project.logging.filter;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.project.logging.exception.CustomException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -19,49 +21,20 @@ import java.util.UUID;
 @Component
 public class ReqResFilter extends OncePerRequestFilter {
     protected static final Logger log = LoggerFactory.getLogger("dev");
+    protected static final ObjectMapper objectMapper= new ObjectMapper();
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        //  ContentCachingRequestWrapper httpServletRequest = new ContentCachingRequestWrapper((HttpServletRequest) request);
-        //  ContentCachingResponseWrapper httpServletResponse = new ContentCachingResponseWrapper((HttpServletResponse) response);
-
-       /* //in
-            String traceId = UUID.randomUUID().toString();
-             log.info("요청 {}", traceId);
-
-            request.setAttribute("traceId", traceId);
-            filterChain.doFilter(request, response);
-            //이후 아웃
-
-            log.info("응답 {}", traceId);
-            //response.contentType = MediaType.APPLICATION_JSON_VALUE;
-            //response.status = HttpStatus.INTERNAL_SERVER_ERROR.value();
-
-        }*/
-        //in
 
         String traceId = UUID.randomUUID().toString();
-
 
         try {
             CachedBodyHttpServletRequest cachedBodyHttpServletRequest = new CachedBodyHttpServletRequest(request);
             cachedBodyHttpServletRequest.setAttribute("traceId", traceId);
 
-            String url = request.getRequestURI();
-
-            //log.info("getStatus : {}", response.getStatus());
-            // log.info("요청 {}", traceId);
-
+            log.info("요청");
             filterChain.doFilter(cachedBodyHttpServletRequest, response); //이후 아웃
-
-            //log.info("응답 {}", traceId);
-            // int httpStatus = response.getStatus();
-            //String resContent = new String(response.getContentAsByteArray());
-            //log.info("resContent : {}", kv("httpStatus", httpStatus));
-
-            // response.copyBodyToResponse();//중요
-            // log.info("resContent", kv("httpStatus",httpStatus), kv("resContent",resContent));
-
+            log.info("응답");
 
         } catch (Exception e) {
 
@@ -69,15 +42,23 @@ public class ReqResFilter extends OncePerRequestFilter {
 
             response.setContentType(MediaType.APPLICATION_JSON_VALUE);
             response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
-            CustomException customException = new CustomException(
-                     status = HttpStatus.INTERNAL_SERVER_ERROR,
-                    code = HttpStatus.INTERNAL_SERVER_ERROR.value(),
-                   traceId = traceId,
-                   message = "Internal Server Error");
 
-            customException.
 
-//
+            CustomException ce = new CustomException();
+
+            ce.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
+            ce.setCode(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()));
+            ce.setTraceId(traceId);
+            ce.setMessage("Internal Server Error");
+
+            try {
+            log.error("{}", objectMapper.writeValueAsString(ce));
+
+           } catch (IOException ie) {
+            log.warn("IOException Occur");
+                throw new RuntimeException();
+            }
+
 
 
         }
