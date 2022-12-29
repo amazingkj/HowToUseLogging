@@ -20,7 +20,7 @@ public class ReqResLogging {
 
     @Override
     public String toString() {
-        return "ReqResLogging{" +
+        return "{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';

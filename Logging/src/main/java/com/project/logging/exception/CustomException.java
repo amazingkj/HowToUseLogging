@@ -7,6 +7,7 @@ public class CustomException {
 
     private HttpStatus status;
     private String code;
+    private String errorName;
     private String traceId;
     private String message;
 
@@ -27,6 +28,15 @@ public class CustomException {
         this.code = code;
     }
 
+    public String getErrorName() {
+        return errorName;
+    }
+
+    public void setErrorName(String errorName) {
+        this.errorName = errorName;
+    }
+
+
     public String getTraceId() {
         return traceId;
     }
@@ -46,10 +56,11 @@ public class CustomException {
     @Override
     public String toString() {
         return "CustomException{" +
-                "status:'" + status + '\'' +
-                ", code:'" + code + '\'' +
-                ", traceId:'" + traceId + '\'' +
-                ", message:'" + message + '\'' +
+                "status=" + status +
+                ", code='" + code + '\'' +
+                ", errorName='" + errorName + '\'' +
+                ", traceId='" + traceId + '\'' +
+                ", message='" + message + '\'' +
                 '}';
     }
 }

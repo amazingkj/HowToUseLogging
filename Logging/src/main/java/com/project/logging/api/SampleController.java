@@ -1,14 +1,13 @@
 package com.project.logging.api;
 
 import com.project.logging.dto.ReqResLogging;
-import com.project.logging.service.AOPService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
@@ -24,6 +23,15 @@ public class SampleController {
         return reqResLogging;
 
     }
+
+    @GetMapping(value = "/test")
+    Map<String, String> test(HttpServletRequest httpServletRequest){
+        Map<String, String> map = new HashMap();
+        map.put("status", "ok");
+        map.put("date", "2022-12-28");
+        return map;
+    }
+
     @RequestMapping(value = "/*")
     ResponseEntity<?> responseEntity(HttpServletRequest httpServletRequest){
 

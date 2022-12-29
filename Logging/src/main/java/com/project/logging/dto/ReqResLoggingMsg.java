@@ -5,30 +5,17 @@ import java.util.Map;
 
 
 public class ReqResLoggingMsg {
-    @JsonProperty(value = "traceId")
     private String traceId;
-    @JsonProperty(value = "class")
     private String className;
-    @JsonProperty(value = "http_method")
     private String httpMethod;
-    @JsonProperty(value = "uri")
     private String uri;
-    @JsonProperty(value = "method")
     private String method;
-    @JsonProperty(value = "params")
     private Map<String,Object> params;
-    @JsonProperty(value = "log_time")
     private String logTime;
-
-    @JsonProperty(value = "server_ip")
     private String serverIp;
-    @JsonProperty(value = "device_type")
     private String deviceType;
-    @JsonProperty(value = "request_body")
-    private Object requestBody;
-    @JsonProperty(value = "response_body")
-    private Object responseBody;
-    @JsonProperty(value = "elapsed_time")
+    private String requestBody;
+    private String responseBody;
     private String elapsedTime;
 
 
@@ -104,15 +91,15 @@ public class ReqResLoggingMsg {
         this.deviceType = deviceType;
     }
 
-    public Object getRequestBody() {
+    public String getRequestBody() {
         return requestBody;
     }
 
-    public void setRequestBody(Object requestBody) {
+    public void setRequestBody(String requestBody) {
         this.requestBody = requestBody;
     }
 
-    public Object getResponseBody() {
+    public String getResponseBody() {
         return responseBody;
     }
 
