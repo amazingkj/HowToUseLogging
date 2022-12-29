@@ -6,6 +6,9 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,8 +30,13 @@ public class SampleController {
     @GetMapping(value = "/test")
     Map<String, String> test(HttpServletRequest httpServletRequest){
         Map<String, String> map = new HashMap();
+        DateFormat sdFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date nowDate = new Date();
+        String tempDate = sdFormat.format(nowDate);
+
+
         map.put("status", "ok");
-        map.put("date", "2022-12-28");
+        map.put("date", tempDate);
         return map;
     }
 

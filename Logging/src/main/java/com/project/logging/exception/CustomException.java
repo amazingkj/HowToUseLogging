@@ -55,7 +55,7 @@ public class CustomException {
 
     @Override
     public String toString() {
-        return "CustomException{" +
+        return "{" +
                 "status=" + status +
                 ", code='" + code + '\'' +
                 ", errorName='" + errorName + '\'' +

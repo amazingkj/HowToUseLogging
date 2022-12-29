@@ -39,6 +39,9 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
     private static final String TIMESTAMP_FORMAT = "yyyy-MM-dd HH:mm:ss.SSS";
     private static final Logger log = LoggerFactory.getLogger("dev");
     private ObjectMapper objectMapper = new ObjectMapper();
+    private ReqResLoggingMsg msg = new ReqResLoggingMsg();
+
+    private CustomException ce = new CustomException();
 
     private String host = "";
     private String ip = "";
@@ -54,6 +57,15 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
     @AfterThrowing(value="ApiRestPointCut()", throwing="exception")
     public void afterThrowingTargetMethod(JoinPoint thisJoinPoint, Exception exception) throws Exception {
 
+        ce.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
+        ce.setCode(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()));
+        ce.setTraceId(TraceId);
+        ce.setMessage("Internal Server Error - aop");
+
+        // ReqResLoggingMsg rr = new ReqResLoggingMsg();
+        msg.setResponseBody(objectMapper.writeValueAsString(ce));
+
+        log.info("error in aop 별도 처리 : {}", (objectMapper.writeValueAsString(msg)));
     } //예외처리
 
 
@@ -67,31 +79,14 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
     public Object controllerAroundLogging(ProceedingJoinPoint joinPoint) throws Throwable {
 
         Object result ="";
-        ReqResLoggingMsg msg = new ReqResLoggingMsg();
+        //ReqResLoggingMsg msg = new ReqResLoggingMsg();
 
         try {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
             HttpServletResponse response =
                     ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes()).getResponse();
 
-            System.out.println("==============");
-
-            System.out.println(response);
-            if(response != null) {
-                System.out.println("getStatus"+response.getStatus());
-                System.out.println("getContentType"+response.getContentType());
-                System.out.println("getClass"+response.getClass());
-                System.out.println("getTrailerFields"+response.getTrailerFields());
-                System.out.println("getStatus"+response.getCharacterEncoding());
-            }
-
-            System.out.println("==============");
-
-
-
-
-
-            this.clientIp = request.getRemoteAddr();
+                        this.clientIp = request.getRemoteAddr();
             this.clientUrl = request.getRequestURL().toString();
             this.TraceId = request.getAttribute("traceId").toString();
             this.timeStamp = new SimpleDateFormat(TIMESTAMP_FORMAT).format(new Timestamp(System.currentTimeMillis()));
@@ -101,9 +96,6 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             String className = joinPoint.getSignature().getDeclaringType().getName();
             String methodName = joinPoint.getSignature().getName();
 
-
-
-           // ReqResLoggingMsg msg = new ReqResLoggingMsg();
 
             try {
 
@@ -137,18 +129,9 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             msg.setParams(getParams(request));
 
             if(result != null) {
-
                 msg.setResponseBody(result.toString());
 
-
-                //response
             }
-
-            System.out.println("++++++++++++++++++++++++++");
-
-            System.out.println(objectMapper.writeValueAsString(msg));
-
-            System.out.println("++++++++++++++++++++++++++");
 
             log.info("기본값 : {}", objectMapper.writeValueAsString(msg));
 
@@ -156,7 +139,7 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
 
         } catch (Exception e) {
 
-            CustomException ce = new CustomException();
+            //CustomException ce = new CustomException();
 
             ce.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
             ce.setCode(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()));
@@ -166,8 +149,9 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
            // ReqResLoggingMsg rr = new ReqResLoggingMsg();
             msg.setResponseBody(objectMapper.writeValueAsString(ce));
 
-            log.info("aop에서 에러 받았을 때 : {}", (objectMapper.writeValueAsString(msg)));
+            log.info("error in aop : {}", (objectMapper.writeValueAsString(msg)));
             /* try 구문의 기본값 로그와 에러 로그가 함께 나오게 할 수는 없을까? */
+            /* 에러 발생 시 log response body 값이 이상함 */
             throw e;
         }
 

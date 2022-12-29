@@ -31,48 +31,38 @@ public class ReqResFilter extends OncePerRequestFilter {
         try {
             CachedBodyHttpServletRequest cachedBodyHttpServletRequest = new CachedBodyHttpServletRequest(request);
             cachedBodyHttpServletRequest.setAttribute("traceId", traceId);
-
-
-            log.info("요청");
-            filterChain.doFilter(cachedBodyHttpServletRequest, response); //이후 아웃
-            log.info("응답");
-
-
+            //IN
+            //log.info("요청");
+            filterChain.doFilter(cachedBodyHttpServletRequest, response);
+            //OUT
+            //log.info("응답");
 
         } catch (Exception e) {
 
-            // log.error("그냥 에러 {}",objectMapper.writeValueAsString(e.getMessage()));
-
             //response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-            response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+            response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value()); //서버에러 500으로 상태 갱신
 
             CustomException ce = new CustomException();
 
             ce.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
-//            ce.setStatus(HttpStatus.valueOf(response.getStatus()));
-//            ce.setCode(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()));
             ce.setCode(String.valueOf(HttpStatus.valueOf(response.getStatus())));
             ce.setErrorName(e.getClass().getSimpleName());
             ce.setTraceId(traceId);
-//            ce.setMessage("Internal Server Error");
             ce.setMessage(e.getCause().getMessage());
 
-            try {
-            log.error("커스텀 에러 {}", objectMapper.writeValueAsString(ce));
+//            ce.setStatus(HttpStatus.valueOf(response.getStatus()));
+//            ce.setCode(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()));
+//            ce.setMessage("Internal Server Error");
 
-                System.out.println("==========================");
-                System.out.println(objectMapper.writeValueAsString(ce));
-                System.out.println("==========================");
+            try {
+            log.error("error message :{}", objectMapper.writeValueAsString(ce));
 
            } catch (IOException ie) {
             log.warn("IOException Occur");
                 throw new RuntimeException();
             }
 
-
-
         }
-
 
     }
 
