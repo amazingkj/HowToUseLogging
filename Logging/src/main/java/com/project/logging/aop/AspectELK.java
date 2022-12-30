@@ -3,7 +3,7 @@ package com.project.logging.aop;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.project.logging.dto.ReqResLoggingMsg;
 import com.project.logging.exception.CustomException;
-import net.logstash.logback.argument.StructuredArguments;
+
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -12,8 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
+
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -65,6 +64,7 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
         // ReqResLoggingMsg rr = new ReqResLoggingMsg();
         msg.setResponseBody(objectMapper.writeValueAsString(ce));
 
+        /* 이 부분이 발동 하는지 확인되지 않음 */
         log.info("error in aop 별도 처리 : {}", (objectMapper.writeValueAsString(msg)));
     } //예외처리
 
@@ -133,6 +133,11 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
 
             }
 
+
+            /* aop try 구문의 기본값 로그와 filter 에러 로그가 함께 나오게 할 수는 없을까? */
+            /* 에러 발생 시에는 log response body 값이 200 0k 0k,~ 로 발생해서 아쉬움 */
+            /*<200 OK OK,com.project.logging.filter.CachedBodyHttpServletRequest@5fdeac69,[]>*/
+
             log.info("기본값 : {}", objectMapper.writeValueAsString(msg));
 
             return result;
@@ -150,8 +155,7 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             msg.setResponseBody(objectMapper.writeValueAsString(ce));
 
             log.info("error in aop : {}", (objectMapper.writeValueAsString(msg)));
-            /* try 구문의 기본값 로그와 에러 로그가 함께 나오게 할 수는 없을까? */
-            /* 에러 발생 시 log response body 값이 이상함 */
+
             throw e;
         }
 

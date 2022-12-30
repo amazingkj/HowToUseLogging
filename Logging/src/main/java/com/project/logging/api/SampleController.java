@@ -1,6 +1,8 @@
 package com.project.logging.api;
 
 import com.project.logging.dto.ReqResLogging;
+import com.project.logging.dto.ReqResLoggingMsg;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -44,8 +46,8 @@ public class SampleController {
     ResponseEntity<?> responseEntity(HttpServletRequest httpServletRequest){
 
         //send 에 대한 Response
-        //검색어 thread id 변경
         return ResponseEntity.ok(httpServletRequest);
+        /*<200 OK OK,com.project.logging.filter.CachedBodyHttpServletRequest@5fdeac69,[]>*/
     }
 
 
