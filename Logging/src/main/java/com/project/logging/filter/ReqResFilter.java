@@ -39,7 +39,7 @@ public class ReqResFilter extends OncePerRequestFilter {
 
         } catch (Exception e) {
 
-            //response.setContentType(MediaType.APPLICATION_JSON_VALUE);
+            //response.setContentTy pe(MediaType.APPLICATION_JSON_VALUE);
             response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value()); //서버에러 500으로 상태 갱신
 
             CustomException ce = new CustomException();
@@ -55,7 +55,7 @@ public class ReqResFilter extends OncePerRequestFilter {
 //            ce.setMessage("Internal Server Error");
 
             try {
-            log.error("error message :{}", objectMapper.writeValueAsString(ce));
+            log.error("error message in filter :{}", objectMapper.writeValueAsString(ce));
 
            } catch (IOException ie) {
             log.warn("IOException Occur");

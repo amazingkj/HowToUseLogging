@@ -11,6 +11,7 @@ import org.json.JSONException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import org.springframework.web.context.request.RequestContextHolder;
@@ -63,7 +64,7 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
 
         // ReqResLoggingMsg rr = new ReqResLoggingMsg();
         msg.setResponseBody(objectMapper.writeValueAsString(ce));
-
+  /*{\"name\":\"jiin\",\"age\":\"40\"},*/
         /* 이 부분이 발동 하는지 확인되지 않음 */
         log.info("error in aop 별도 처리 : {}", (objectMapper.writeValueAsString(msg)));
     } //예외처리
@@ -96,6 +97,17 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             String className = joinPoint.getSignature().getDeclaringType().getName();
             String methodName = joinPoint.getSignature().getName();
 
+           // User-Agent: <product> / <product-version> <comment>
+
+            String accept=request.getHeader("Accept");
+            String acceptEncoding=request.getHeader("Accept-Encoding");
+            String acceptLanguage=request.getHeader("Accept-Language");
+            String referer=request.getHeader("Referer");
+            String connection=request.getHeader("Connection");
+
+            String contentType=request.getHeader("Content-Type");
+
+
 
             try {
 
@@ -113,7 +125,15 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
                 byte[] body = request.getInputStream().readAllBytes();
                 String body2 = new String(body, StandardCharsets.UTF_8);
                 String replaceBody = body2.replaceAll("\\n", "");
+
                 msg.setRequestBody(replaceBody);
+
+                msg.setAccept(accept);
+                msg.setAcceptEncoding(acceptEncoding);
+                msg.setAcceptLanguage(acceptLanguage);
+                msg.setReferer(referer);
+                msg.setConnection(connection);
+                msg.setContentType(contentType);
 
                 //log.info("{}", objectMapper.writeValueAsString(msg));
 
@@ -128,17 +148,23 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             msg.setElapsedTime(elapsedTime + " ms");
             msg.setParams(getParams(request));
 
-            if(result != null) {
-                msg.setResponseBody(result.toString());
+//            if(result != null) {
+//                msg.setResponseBody(result.toString());
+//
+//        }
 
+            /* 에러 발생 시에는 log response body 값이 200 0k 0k,~ 로 발생해서 아쉬웠음 */
+            /*<200 OK OK,com.project.logging.filter.CachedBodyHttpServletRequest@5fdeac69,[]>*/
+
+            /*object인 result를 controller에 리턴되는 값으로 형변환 */
+            if( result instanceof ResponseEntity<?>) {
+                msg.setResponseBody((String) ((ResponseEntity<?>) result).getBody());
             }
 
 
-            /* aop try 구문의 기본값 로그와 filter 에러 로그가 함께 나오게 할 수는 없을까? */
-            /* 에러 발생 시에는 log response body 값이 200 0k 0k,~ 로 발생해서 아쉬움 */
-            /*<200 OK OK,com.project.logging.filter.CachedBodyHttpServletRequest@5fdeac69,[]>*/
 
-            log.info("기본값 : {}", objectMapper.writeValueAsString(msg));
+            //기본값
+            log.info("{}", objectMapper.writeValueAsString(msg));
 
             return result;
 
@@ -155,7 +181,7 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             msg.setResponseBody(objectMapper.writeValueAsString(ce));
 
             log.info("error in aop : {}", (objectMapper.writeValueAsString(msg)));
-
+            /* aop try 구문의 기본값 로그와 filter 에러 로그가 함께 나오게 할 수는 없을까? */
             throw e;
         }
 
@@ -169,6 +195,7 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             String replaceParam = param.replaceAll("\\.", "-");
             map.put(replaceParam, request.getParameter(param));
         }
+
         return map;
     }
 
