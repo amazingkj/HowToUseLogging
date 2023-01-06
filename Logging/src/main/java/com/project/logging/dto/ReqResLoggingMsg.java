@@ -1,5 +1,4 @@
 package com.project.logging.dto;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Map;
 
@@ -16,7 +15,7 @@ public class ReqResLoggingMsg {
     private String deviceType;
     private String requestBody;
     private String responseBody;
-    private String elapsedTime;
+    private float elapsedTime;
 
     //추가한 header 정보
 
@@ -28,6 +27,29 @@ public class ReqResLoggingMsg {
 
     private String contentType;
 
+    private int StatusCode;
+
+    private int ContentLengthByte;
+
+    public int getContentLengthByte() {
+        return ContentLengthByte;
+    }
+
+    public void setContentLengthByte(int contentLengthByte) {
+        ContentLengthByte = contentLengthByte;
+    }
+
+    public void setElapsedTime(float elapsedTime) {
+        this.elapsedTime = elapsedTime;
+    }
+
+    public int getStatusCode() {
+        return StatusCode;
+    }
+
+    public void setStatusCode(int statusCode) {
+        StatusCode = statusCode;
+    }
 
     public String getTraceId() {
         return traceId;
@@ -117,14 +139,13 @@ public class ReqResLoggingMsg {
         this.responseBody = responseBody;
     }
 
-    public String getElapsedTime() {
+    public float getElapsedTime() {
         return elapsedTime;
     }
 
     public void setElapsedTime(String elapsedTime) {
-        this.elapsedTime = elapsedTime;
+        this.elapsedTime = Float.parseFloat(elapsedTime);
     }
-
 
     public String getAccept() {
         return accept;
@@ -189,13 +210,15 @@ public class ReqResLoggingMsg {
                 ", deviceType='" + deviceType + '\'' +
                 ", requestBody='" + requestBody + '\'' +
                 ", responseBody='" + responseBody + '\'' +
-                ", elapsedTime='" + elapsedTime + '\'' +
+                ", elapsedTime=" + elapsedTime +
                 ", accept='" + accept + '\'' +
                 ", acceptEncoding='" + acceptEncoding + '\'' +
                 ", acceptLanguage='" + acceptLanguage + '\'' +
                 ", referer='" + referer + '\'' +
                 ", connection='" + connection + '\'' +
                 ", contentType='" + contentType + '\'' +
+                ", StatusCode=" + StatusCode +
+                ", ContentLengthByte=" + ContentLengthByte +
                 '}';
     }
 }
