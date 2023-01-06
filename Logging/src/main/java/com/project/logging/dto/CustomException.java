@@ -1,8 +1,9 @@
-package com.project.logging.exception;
+package com.project.logging.dto;
 
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-
+@RequiredArgsConstructor
 public class CustomException {
 
     private HttpStatus status;
@@ -10,6 +11,14 @@ public class CustomException {
     private String errorName;
     private String traceId;
     private String message;
+
+    public CustomException(HttpStatus status, String code, String errorName, String traceId, String message) {
+        this.status = status;
+        this.code = code;
+        this.errorName = errorName;
+        this.traceId = traceId;
+        this.message = message;
+    }
 
 
     public HttpStatus getStatus() {
@@ -62,5 +71,6 @@ public class CustomException {
                 ", traceId='" + traceId + '\'' +
                 ", message='" + message + '\'' +
                 '}';
+
     }
 }
