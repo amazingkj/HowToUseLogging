@@ -1,6 +1,6 @@
 package com.project.logging.dto;
 
-public class ReqResLogging {
+public class nameAgeDTO {
     private String name;
     private int age;
     public String getName() {
