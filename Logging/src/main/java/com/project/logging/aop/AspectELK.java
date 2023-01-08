@@ -165,8 +165,9 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
                     msg.setResponseBody((String) ((ResponseEntity<?>) result).getBody());
                 }
 
-                if (result != null && !(result instanceof ResponseEntity<?>)) {
-                msg.setResponseBody(result.toString());
+                if (result != null && !(result instanceof ResponseEntity<?>)) {  //Map<?,?>
+                    //msg.setResponseBody((String) ((ResponseEntity<?>) result).getBody());
+                    msg.setResponseBody(result.toString());
 
             }
 
