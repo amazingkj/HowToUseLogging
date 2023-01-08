@@ -1,6 +1,6 @@
 package com.project.logging.api;
 
-import com.project.logging.dto.ReqResLogging;
+import com.project.logging.dto.nameAgeDTO;
 import com.project.logging.service.RestTemplateService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,8 +38,8 @@ public class SampleController {
    }
 
     @PostMapping(path="/post") //post
-    public ReqResLogging post(@RequestBody @Validated ReqResLogging reqResLogging) {
-        return reqResLogging;
+    public nameAgeDTO post(@RequestBody @Validated nameAgeDTO nameAgeDTO) {
+        return nameAgeDTO;
     }
 
     @GetMapping(value = "/test")
@@ -57,6 +57,14 @@ public class SampleController {
     @RequestMapping(value = "/exception")
     ResponseEntity<?> exception() {
         throw new RuntimeException("런타임 에러");
+    }
+
+    @RequestMapping(value = "/exception1")
+    ResponseEntity<?> exception1(HttpServletRequest httpServletRequest){
+
+        //send 에 대한 Response
+        return ResponseEntity.internalServerError().body("");
+        /*<200 OK OK,com.project.logging.filter.CachedBodyHttpServletRequest@5fdeac69,[]>*/
     }
 
     @RequestMapping(value = "/exception2")
@@ -90,6 +98,7 @@ public class SampleController {
     public String responseStatus() {
         throw new ResponseStatusException(HttpStatus.NOT_FOUND,"error.bad", new IllegalArgumentException());
     }
+
 
 /*
     @GetMapping("/req")

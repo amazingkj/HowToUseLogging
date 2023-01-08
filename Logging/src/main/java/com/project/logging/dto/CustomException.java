@@ -20,6 +20,9 @@ public class CustomException {
         this.message = message;
     }
 
+    public CustomException(String message, int i) {
+    }
+
 
     public HttpStatus getStatus() {
         return status;

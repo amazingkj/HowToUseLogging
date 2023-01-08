@@ -15,7 +15,7 @@ public class ReqResLoggingMsg {
     private String deviceType;
     private String requestBody;
     private String responseBody;
-    private float elapsedTime;
+    private long elapsedTime;
 
     //추가한 header 정보
 
@@ -37,10 +37,6 @@ public class ReqResLoggingMsg {
 
     public void setContentLengthByte(int contentLengthByte) {
         ContentLengthByte = contentLengthByte;
-    }
-
-    public void setElapsedTime(float elapsedTime) {
-        this.elapsedTime = elapsedTime;
     }
 
     public int getStatusCode() {
@@ -139,12 +135,12 @@ public class ReqResLoggingMsg {
         this.responseBody = responseBody;
     }
 
-    public float getElapsedTime() {
+    public long getElapsedTime() {
         return elapsedTime;
     }
 
-    public void setElapsedTime(String elapsedTime) {
-        this.elapsedTime = Float.parseFloat(elapsedTime);
+    public void setElapsedTime(long elapsedTime) {
+        this.elapsedTime = elapsedTime;
     }
 
     public String getAccept() {

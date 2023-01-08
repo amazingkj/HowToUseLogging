@@ -2,6 +2,7 @@ package com.project.logging.aop;
 import com.project.logging.dto.ReqResLoggingMsg;
 import com.project.logging.dto.CustomException;
 
+import static java.lang.Thread.sleep;
 import static net.logstash.logback.argument.StructuredArguments.kv;
 import static net.logstash.logback.argument.StructuredArguments.v;
 
@@ -77,6 +78,8 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
 
         HttpServletResponse response = null;
 
+        long start = 0;
+
         try {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
             response = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getResponse();
@@ -87,7 +90,7 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             this.timeStamp = new SimpleDateFormat(TIMESTAMP_FORMAT).format(new Timestamp(System.currentTimeMillis()));
             this.ug = request.getHeader("user-agent");
 
-            final long start = System.currentTimeMillis();
+            start = System.currentTimeMillis();
             String className = joinPoint.getSignature().getDeclaringType().getName();
             if( "org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController".equals(className) ) {
                 return result;
@@ -113,7 +116,7 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
 
             msg.setLogTime(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
             msg.setServerIp(ip);
-            msg.setDeviceType(request.getHeader("user-agent"));
+            msg.setDeviceType(ug);
             //user-agent
 
             byte[] body = request.getInputStream().readAllBytes();
@@ -132,36 +135,60 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             msg.setConnection(connection);
             msg.setContentType(contentType);
             msg.setContentLengthByte(request.getContentLength());
-            //log.info("{}", objectMapper.writeValueAsString(msg));
-            /*중요 */
 
+            /*메서드 실행*/
             result = joinPoint.proceed();
+            /*메서드 실행 후*/
 
-            String elapsedTime = String.valueOf(System.currentTimeMillis() - start);
+            sleep(1000);
+            long elapsedTime = (System.currentTimeMillis() - start);
             msg.setElapsedTime(elapsedTime);//ms
             msg.setParams(getParams(request));
 
-            System.out.println("--------------------------------------");
-            System.out.println(response.getStatus());
-            System.out.println("--------------------------------------");
-            msg.setStatusCode(response.getStatus());
+            int afterJPStatus = response.getStatus();
 
-            if( response.getStatus() / 100 == 2 || response.getStatus() / 100 == 3 )
+            if( result instanceof ResponseEntity<?>) {
+                afterJPStatus = ((ResponseEntity<?>) result).getStatusCode().value();
+            }
+
+
+            System.out.println("--------------------------------------");
+            System.out.println(afterJPStatus);
+            System.out.println("--------------------------------------");
+            msg.setStatusCode(afterJPStatus);
+            CustomException ce = new CustomException();
+
+
+            if( afterJPStatus / 100 == 2 || afterJPStatus / 100 == 3 )
             {
-                if (result != null) {
-                    msg.setResponseBody(result.toString());
-
-                    System.out.println("false");
+                if (result != null && result instanceof ResponseEntity<?>) {
+                    msg.setResponseBody((String) ((ResponseEntity<?>) result).getBody());
                 }
 
-            } else if(response.getStatus() / 100 == 4){
-                CustomException ce = new CustomException();
+                if (result != null && !(result instanceof ResponseEntity<?>)) {
+                msg.setResponseBody(result.toString());
+
+            }
+
+            } else if(afterJPStatus / 100 == 4){
 
                 ce.setStatus(HttpStatus.NOT_FOUND);
                 ce.setCode(String.valueOf(response.getStatus()));
+                ce.setErrorName("NOT_FOUND");
                 ce.setTraceId(TraceId);
                 ce.setMessage("4XX");
                 msg.setResponseBody(String.valueOf(ce));
+
+            } else if(afterJPStatus / 100 == 5){
+
+                ce.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
+                ce.setCode(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()));
+                ce.setErrorName("INTERNAL_SERVER_ERROR");
+                ce.setTraceId(TraceId);
+                ce.setMessage("5XX");
+                msg.setResponseBody(String.valueOf(ce));
+            } else {
+                msg.setResponseBody(result.toString());
             }
 
             System.out.println("===============================");
@@ -173,18 +200,21 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
 
         } catch (Exception e) {
 
+            //에러 정보
             CustomException ce = new CustomException();
-            response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+            //response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
             ce.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
             ce.setCode(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()));
             ce.setErrorName(e.getClass().getSimpleName());
             ce.setTraceId(TraceId);
             ce.setMessage("5XX");
 
-
-            msg.setResponseBody(String.valueOf(kv("ErrorInclude", ce)));
-            msg.setStatusCode(response.getStatus());
-
+            //response 정보
+            long elapsedTime = (System.currentTimeMillis() - start);
+            msg.setElapsedTime(elapsedTime);//ms
+            msg.setResponseBody(String.valueOf(v("ErrorInclude", ce)));
+            msg.setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
+            msg.setElapsedTime(-1);
 
             System.out.println("===============================");
             System.out.println("에러가 있거나");
@@ -193,9 +223,6 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             log.info("{},{}", v("commonMessage", msg), v("useragent", ug));
 
             throw e;
-
-        }finally{
-
 
         }
         return result;

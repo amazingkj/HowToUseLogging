@@ -1,10 +1,10 @@
 package com.project.logging.filter;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.project.logging.dto.CustomException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -20,7 +20,6 @@ import java.util.UUID;
 @Component
 public class ReqResFilter extends OncePerRequestFilter {
     protected static final Logger log = LoggerFactory.getLogger("dev");
-    protected static final ObjectMapper objectMapper= new ObjectMapper();
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
@@ -39,10 +38,9 @@ public class ReqResFilter extends OncePerRequestFilter {
 
         } catch (Exception e) {
 
-            //response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-
-            //filter에서 캐치한 에러는 서버 에러
-            //response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value()); //서버에러 500으로 상태 갱신
+            //filter에서 캐치한 에러는 서버 에러기 때문에 항상 500
+            response.setContentType(MediaType.APPLICATION_JSON_VALUE);
+            response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value()); //서버에러 500으로 상태 갱신
 
             CustomException ce = new CustomException();
             //System.out.println(HttpStatus);
