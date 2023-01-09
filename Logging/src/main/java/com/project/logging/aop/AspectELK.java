@@ -55,14 +55,6 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
     @Pointcut("execution(* com.project.logging.*.* (..))")
     private void ApiRestPointCut(){} //pointcut signature
 
-    @AfterThrowing(value="ApiRestPointCut()", throwing="exception")
-    public void afterThrowingTargetMethod(JoinPoint thisJoinPoint, Exception exception) throws Exception {
-
-        System.out.println("===============================");
-        System.out.println("AfterThrowing 들렀다");
-        System.out.println("===============================");
-    } //예외처리
-
     @PostConstruct
     public void init() throws UnknownHostException {
         InetAddress addr = InetAddress.getLocalHost();
@@ -74,10 +66,7 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
     public Object controllerAroundLogging(ProceedingJoinPoint joinPoint) throws Throwable {
 
         Object result = "";
-        //ReqResLoggingMsg msg = new ReqResLoggingMsg();
-
         HttpServletResponse response = null;
-
         long start = 0;
 
         try {
@@ -126,8 +115,6 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
 
             msg.setRequestBody(String.valueOf(v("req", replaceBody2)));
 
-
-
             msg.setAccept(accept);
             msg.setAcceptEncoding(acceptEncoding);
             msg.setAcceptLanguage(acceptLanguage);
@@ -139,8 +126,9 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             /*메서드 실행*/
             result = joinPoint.proceed();
             /*메서드 실행 후*/
+            /*메서드 실행 후*/
 
-            sleep(1000);
+            sleep(500);
             long elapsedTime = (System.currentTimeMillis() - start);
             msg.setElapsedTime(elapsedTime);//ms
             msg.setParams(getParams(request));
@@ -158,18 +146,24 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             msg.setStatusCode(afterJPStatus);
             CustomException ce = new CustomException();
 
+            //responseBody
+            if (result != null && result instanceof ResponseEntity<?>) {
+                msg.setResponseBody((String) ((ResponseEntity<?>) result).getBody());
+            }else if(result != null && !(result instanceof ResponseEntity<?>)) {  //Map<?,?>
+                //msg.setResponseBody((String) ((ResponseEntity<?>) result).getBody());
+                msg.setResponseBody(result.toString());
+            }else if(result == null){
+                msg.setResponseBody("");
+            }
 
+            //200,300,400,500 대 Status 분류
             if( afterJPStatus / 100 == 2 || afterJPStatus / 100 == 3 )
             {
-                if (result != null && result instanceof ResponseEntity<?>) {
-                    msg.setResponseBody((String) ((ResponseEntity<?>) result).getBody());
-                }
 
-                if (result != null && !(result instanceof ResponseEntity<?>)) {  //Map<?,?>
-                    //msg.setResponseBody((String) ((ResponseEntity<?>) result).getBody());
-                    msg.setResponseBody(result.toString());
+                System.out.println("===============================");
+                System.out.println("정상이거나 ");
+                System.out.println("===============================");
 
-            }
 
             } else if(afterJPStatus / 100 == 4){
 
@@ -178,7 +172,7 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
                 ce.setErrorName("NOT_FOUND");
                 ce.setTraceId(TraceId);
                 ce.setMessage("4XX");
-                msg.setResponseBody(String.valueOf(ce));
+                //msg.setResponseBody(String.valueOf(ce));
 
             } else if(afterJPStatus / 100 == 5){
 
@@ -187,17 +181,13 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
                 ce.setErrorName("INTERNAL_SERVER_ERROR");
                 ce.setTraceId(TraceId);
                 ce.setMessage("5XX");
-                msg.setResponseBody(String.valueOf(ce));
+                //msg.setResponseBody(String.valueOf(ce));
             } else {
                 msg.setResponseBody(result.toString());
             }
 
-            System.out.println("===============================");
-            System.out.println("정상이거나 ");
-            System.out.println("===============================");
-
             //기본값
-            log.info("{},{}", v("commonMessage", msg), v("useragent", ug));
+            log.info("{},{},{}", v("commonMessage", msg), v("useragent", ug), v("custom",ce));
 
         } catch (Exception e) {
 
@@ -213,15 +203,15 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             //response 정보
             long elapsedTime = (System.currentTimeMillis() - start);
             msg.setElapsedTime(elapsedTime);//ms
-            msg.setResponseBody(String.valueOf(v("ErrorInclude", ce)));
+            msg.setResponseBody(result.toString());
             msg.setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
-            msg.setElapsedTime(-1);
+            //msg.setElapsedTime(-1);
 
             System.out.println("===============================");
             System.out.println("에러가 있거나");
             System.out.println("===============================");
 
-            log.info("{},{}", v("commonMessage", msg), v("useragent", ug));
+            log.info("{},{},{}", v("commonMessage", msg), v("useragent", ug),v("custom",ce));
 
             throw e;
 
