@@ -1,7 +1,6 @@
 package com.project.logging.api;
 
 import com.project.logging.dto.nameAgeDTO;
-import com.project.logging.service.RestTemplateService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -20,15 +19,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api")
 public class SampleController {
-    private final RestTemplateService restTemplateService;
 
-    public SampleController(RestTemplateService restTemplateService) {
-        this.restTemplateService = restTemplateService;
-    }
-
-   // @GetMapping("/sample")
-   // pubilc String Sample(@RequestBody ReqResLogging ReqResLogging) {
-   // }
    @RequestMapping(value = "/*")
    ResponseEntity<?> responseEntity(HttpServletRequest httpServletRequest){
 
@@ -72,13 +63,6 @@ public class SampleController {
         throw new IllegalArgumentException("IllegalArgumentException");
     }
 
-    // response.sendError는  filter다음에 동작
-
-//    @GetMapping("/error-404")
-//    public void error404(HttpServletResponse response) throws IOException {
-//        response.sendError(404, "404 오류!");
-//    }
-
     @GetMapping("/error-404")
     public void error404(HttpServletResponse response) throws IOException {
         response.sendError(404, "404 오류!");
@@ -100,11 +84,5 @@ public class SampleController {
     }
 
 
-/*
-    @GetMapping("/req")
-    public ResponseEntity<?> getHello(){
-        return restTemplateService.genericExchange();
-    }
-*/
 
 }

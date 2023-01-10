@@ -26,15 +26,16 @@ public class ReqResFilter extends OncePerRequestFilter {
 
         String traceId = UUID.randomUUID().toString().substring(0,8);
         //눈으로 식별이 잘 안되는 관계로 앞부분만 사용
-
         try {
+
             CachedBodyHttpServletRequest cachedBodyHttpServletRequest = new CachedBodyHttpServletRequest(request);
             cachedBodyHttpServletRequest.setAttribute("traceId", traceId);
+
+            System.out.println(traceId);
+
             //IN
-//            log.info("요청");
             filterChain.doFilter(cachedBodyHttpServletRequest, response);
             //OUT
-
 
         } catch (Exception e) {
 
@@ -43,19 +44,14 @@ public class ReqResFilter extends OncePerRequestFilter {
             response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value()); //서버에러 500으로 상태 갱신
 
             CustomException ce = new CustomException();
-            //System.out.println(HttpStatus);
             ce.setStatus(HttpStatus.valueOf(response.getStatus()));
-            //ce.setStatus(HttpStatus.);
             ce.setCode(String.valueOf(HttpStatus.valueOf(response.getStatus())).substring(0,3));
             ce.setErrorName(e.getClass().getSimpleName());
             ce.setTraceId(traceId);
             ce.setMessage(e.getCause().getMessage());
 
-            //v(ce);
-            //objectMapper.writeValueAsString(ce);
 
-            //filter에서 받는 로그는 참고용이다//
-
+            //filter에서 받는 로그는 참고용//
             log.error("{}", v("filterError",ce));
 
         }

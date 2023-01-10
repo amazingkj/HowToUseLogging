@@ -6,7 +6,6 @@ import static java.lang.Thread.sleep;
 import static net.logstash.logback.argument.StructuredArguments.kv;
 import static net.logstash.logback.argument.StructuredArguments.v;
 
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.json.JSONException;
@@ -42,7 +41,6 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
     private static final Logger log = LoggerFactory.getLogger("dev");
     private ReqResLoggingMsg msg = new ReqResLoggingMsg();
 
-
     private String host = "";
     private String ip = "";
     private String clientIp = "";
@@ -76,8 +74,10 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             this.clientIp = request.getRemoteAddr();
             this.clientUrl = request.getRequestURL().toString();
             this.TraceId = request.getAttribute("traceId").toString();
+
             this.timeStamp = new SimpleDateFormat(TIMESTAMP_FORMAT).format(new Timestamp(System.currentTimeMillis()));
             this.ug = request.getHeader("user-agent");
+            // User-Agent: <product> / <product-version> <comment>
 
             start = System.currentTimeMillis();
             String className = joinPoint.getSignature().getDeclaringType().getName();
@@ -86,7 +86,7 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             }
             String methodName = joinPoint.getSignature().getName();
 
-            // User-Agent: <product> / <product-version> <comment>
+
 
             String accept = request.getHeader("Accept");
             String acceptEncoding = request.getHeader("Accept-Encoding");
@@ -126,9 +126,8 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             /*메서드 실행*/
             result = joinPoint.proceed();
             /*메서드 실행 후*/
-            /*메서드 실행 후*/
 
-            sleep(500);
+           // sleep(500);
             long elapsedTime = (System.currentTimeMillis() - start);
             msg.setElapsedTime(elapsedTime);//ms
             msg.setParams(getParams(request));
@@ -139,10 +138,7 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
                 afterJPStatus = ((ResponseEntity<?>) result).getStatusCode().value();
             }
 
-
-            System.out.println("--------------------------------------");
-            System.out.println(afterJPStatus);
-            System.out.println("--------------------------------------");
+            //statusCode
             msg.setStatusCode(afterJPStatus);
             CustomException ce = new CustomException();
 
@@ -159,11 +155,9 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             //200,300,400,500 대 Status 분류
             if( afterJPStatus / 100 == 2 || afterJPStatus / 100 == 3 )
             {
-
                 System.out.println("===============================");
                 System.out.println("정상이거나 ");
                 System.out.println("===============================");
-
 
             } else if(afterJPStatus / 100 == 4){
 
@@ -172,7 +166,6 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
                 ce.setErrorName("NOT_FOUND");
                 ce.setTraceId(TraceId);
                 ce.setMessage("4XX");
-                //msg.setResponseBody(String.valueOf(ce));
 
             } else if(afterJPStatus / 100 == 5){
 
@@ -181,7 +174,7 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
                 ce.setErrorName("INTERNAL_SERVER_ERROR");
                 ce.setTraceId(TraceId);
                 ce.setMessage("5XX");
-                //msg.setResponseBody(String.valueOf(ce));
+
             } else {
                 msg.setResponseBody(result.toString());
             }
@@ -193,7 +186,7 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
 
             //에러 정보
             CustomException ce = new CustomException();
-            //response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+
             ce.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
             ce.setCode(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()));
             ce.setErrorName(e.getClass().getSimpleName());
@@ -205,11 +198,6 @@ public class AspectELK { //AOP로 Request, Response와 엔드포인트 정보 �
             msg.setElapsedTime(elapsedTime);//ms
             msg.setResponseBody(result.toString());
             msg.setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
-            //msg.setElapsedTime(-1);
-
-            System.out.println("===============================");
-            System.out.println("에러가 있거나");
-            System.out.println("===============================");
 
             log.info("{},{},{}", v("commonMessage", msg), v("useragent", ug),v("custom",ce));
 
