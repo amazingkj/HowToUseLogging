@@ -1,8 +1,10 @@
 package com.project.logging.dto;
 
 
+import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+@Builder
 @RequiredArgsConstructor
 public class CustomException {
 
